@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColor,
+      backgroundColor: bgColor,
       bottomNavigationBar: MyBottomNavBar(
         onTapChange: (index) => navigatedBottomBar(index),
       ),

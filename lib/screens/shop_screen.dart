@@ -1,4 +1,5 @@
 import 'package:coffee_shop_2/components/coffee_tile.dart';
+import 'package:coffee_shop_2/constant.dart';
 import 'package:coffee_shop_2/models/coffee.dart';
 import 'package:coffee_shop_2/models/coffee_shop.dart';
 import 'package:flutter/material.dart';
@@ -21,13 +22,13 @@ class _ShopScreenState extends State<ShopScreen> {
       context: context,
       builder: (context) => AlertDialog(
         title: const Text('Alert!'),
-        content: const Text('Successfully added to cart'),
+        content: const Text('Successfully added to cart...'),
         actions: [
           TextButton(
             onPressed: () {
               Navigator.pop(context);
             },
-            child: const Text('cancel'),
+            child: const Text('ok'),
           ),
         ],
       ),
@@ -37,6 +38,7 @@ class _ShopScreenState extends State<ShopScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: bgColor,
       body: Consumer<CoffeeShop>(
         builder: (context, value, child) => SafeArea(
           child: Padding(

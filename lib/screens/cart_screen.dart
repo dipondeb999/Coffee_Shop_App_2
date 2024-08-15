@@ -15,7 +15,7 @@ class _CartScreenState extends State<CartScreen> {
 
   // remove item from cart
   void removeFromCart(Coffee coffee){
-    // add to cart
+    // remove to cart
     Provider.of<CoffeeShop>(context, listen: false).removeItemFromCart(coffee);
   }
 
